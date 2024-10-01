@@ -1,0 +1,37 @@
+What is JSX in React?,A syntax extension that allows you to write HTML inside JavaScript.
+How does React handle UI updates?,"Through a virtual DOM, which React uses to minimize direct DOM manipulations."
+What is a React component?,A reusable UI element that can be either a class or function.
+What is the purpose of props in React?,To pass data from a parent component to a child component.
+How do you manage local state in a React component?,Using the useState hook in functional components or this.state in class components.
+What is the React lifecycle?,"The sequence of methods or hooks that run during a component's creation, update, and destruction."
+What does the useEffect hook do in React?,"It allows you to perform side effects in functional components, such as data fetching or subscriptions."
+What is a higher-order component (HOC) in React?,A function that takes a component and returns a new component with added functionality.
+What is the purpose of React's useContext hook?,It allows components to consume values from the React Context without using props.
+How do you optimize performance in a React app?,"By using memoization (React.memo, useMemo, useCallback), lazy loading, and shouldComponentUpdate."
+What does React Router provide?,"A way to implement client-side routing, enabling navigation between different views."
+What is a controlled component in React?,A component that controls its form elements via state.
+How do you pass methods as props in React?,By passing a function from the parent component to the child component as a prop.
+What are fragments in React used for?,To group multiple elements without adding extra nodes to the DOM.
+How do you handle events in React?,"By using event handlers in JSX, like onClick, that call a function."
+What is React’s reconciliation process?,A process that determines how the virtual DOM should be updated based on changes to component state or props.
+How can you conditionally render components in React?,"By using JavaScript conditional operators like if, ternary, or logical && within JSX."
+What is useReducer in React?,A hook for handling more complex state logic by dispatching actions to a reducer function.
+How does React handle key attributes in lists?,"Keys help React identify which items have changed, are added, or are removed, improving list rendering efficiency."
+"What is prop drilling, and how can it be avoided in React?","Prop drilling is passing props through multiple layers of components, and it can be avoided by using Context or state management libraries like Redux."
+How do you create a functional component in React?,"function MyComponent() { return <h1>Hello, World!</h1>; }"
+How do you use the useState hook to manage state in a functional component?,"const [count, setCount] = useState(0);"
+How do you handle a button click event in React?,<button onClick={() => alert('Button clicked!')}>Click me</button>
+How do you pass props to a child component in React?,<ChildComponent name='John' />
+How do you use useEffect to run a function after the component mounts?,"useEffect(() => { console.log('Component mounted'); }, []);"
+How do you conditionally render a component in React?,{isLoggedIn ? <Dashboard /> : <Login />}
+How do you map over an array to render a list of elements in React?,"const items = ['Apple', 'Banana', 'Orange']; return (<ul>{items.map(item => <li key={item}>{item}</li>)}</ul>);"
+How do you create a simple form in React with controlled inputs?,"const [value, setValue] = useState(''); return <input value={value} onChange={e => setValue(e.target.value)} />;"
+How do you create and use useContext to access a context value in React?,"// Create a context
+const MyContext = React.createContext();
+
+// Provide the context
+function ParentComponent() { return (<MyContext.Provider value='Hello, World!'><ChildComponent /></MyContext.Provider>); }
+
+// Consume the context
+function ChildComponent() { const value = useContext(MyContext); return <div>{value}</div>; }"
+How do you create a ref in React using useRef?,const inputRef = useRef(); return <input ref={inputRef} />;
