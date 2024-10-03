@@ -1,0 +1,37 @@
+# Creating flashcards based on the summary of Chapter 1 for Anki
+
+flashcards_chapter_1 = {
+    "Question": [
+        "What is the first phase in the journey of a new software engineer?",
+        "What does 'Peak Newb' refer to in a new engineer's journey?",
+        "What happens during the 'Ramp-Up River' phase for new engineers?",
+        "What is 'Cape Contributor' in the journey of a software engineer?",
+        "What challenges are associated with 'Operations Ocean'?",
+        "What is 'Competence Cove' in the software engineer's journey?",
+        "Why is asking questions important for new engineers?",
+        "What is the focus during the 'Operations Ocean' phase?",
+        "How do engineers transition from 'Cape Contributor' to 'Competence Cove'?",
+        "What mindset is essential for continuous growth as a software engineer?"
+    ],
+    "Answer": [
+        "The first phase is 'Peak Newb,' where new engineers are learning the basics, setting up their environment, and understanding team processes.",
+        "'Peak Newb' refers to the initial phase where new engineers are figuring out the basics and still need guidance.",
+        "In 'Ramp-Up River,' engineers start learning the codebase, contributing small tasks, and asking questions to understand team workflow.",
+        "'Cape Contributor' is when engineers start shipping meaningful features, working more independently, and contributing to code reviews.",
+        "'Operations Ocean' involves handling operational challenges such as debugging, dealing with production systems, and learning how to maintain system health.",
+        "'Competence Cove' represents the phase where engineers are more independent, lead small projects, and take ownership of technical designs.",
+        "Asking questions helps new engineers deepen their understanding of processes and workflows, especially during the 'Ramp-Up River' phase.",
+        "The focus during 'Operations Ocean' is on debugging, production system maintenance, and handling operational challenges.",
+        "Engineers transition by gaining more independence, taking on more responsibility for projects, and driving technical designs.",
+        "A growth mindset, which focuses on continuous learning and improvement, is essential for engineers to grow through each phase."
+    ]
+}
+
+# Convert the flashcards to a DataFrame for CSV export
+flashcards_chapter_1_df = pd.DataFrame(flashcards_chapter_1)
+
+# Save the flashcards to a CSV file for Anki
+csv_file_path = '/mnt/data/flashcards_chapter_1_for_anki.csv'
+flashcards_chapter_1_df.to_csv(csv_file_path, index=False)
+
+csv_file_path
